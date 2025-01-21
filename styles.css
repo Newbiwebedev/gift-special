@@ -1,0 +1,170 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+  color: #333;
+}
+
+
+h1, p {
+  margin: 10px;
+}
+
+/* Landing Page Styling */
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: fadeIn 2s ease-in-out;
+  padding-top: 50px; /* Add padding at the top */
+}
+
+.smiley {
+  font-size: 3rem; /* Larger emoji size */
+  cursor: pointer;
+  animation: bounce 1.5s infinite ease-in-out;
+  margin-top: 20px; /* Add margin at the top */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Login Page Styling */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+  animation: fadeIn 2s ease-in-out;
+}
+
+input, button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ff80bf;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+input:focus, button:focus {
+  box-shadow: 0 0 10px #ff80bf;
+}
+
+button {
+  background: #ffb3c6;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff80bf;
+}
+
+.alert {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ff6666;
+  color: white;
+  border-radius: 5px;
+  animation: shake 0.5s;
+}
+
+/* Shake Animation for Alert */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+}
+
+/* Flashcards Page Styling */
+.flashcards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #b2fefa, #0ed2f7);
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+}
+
+#flashcard {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border: 4px dashed #ffcccc;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInCard 1s ease-in-out;
+  width: 500px;
+  height: 500px;
+  display: flex; /* Add flexbox */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dynamically setting the background image for flashcards */
+#flashcard {
+  background-image: url('1.png'); /* Default image */
+}
+
+#flashcard.next-card {
+  animation: fadeOut 0.5s ease-in-out forwards;
+  background-image: url('2.png'); /* Next image */
+}
+
+.controls button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+}
+
+/* Video Page Styling */
+.video-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+  animation: fadeIn 2s ease-in-out;
+}
+
+video {
+  max-width: 80%;  /* Fixed size relative to container */
+  max-height: 80%; /* Fixed size relative to container */
+  border: 5px solid #ff80bf;
+  border-radius: 15px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
